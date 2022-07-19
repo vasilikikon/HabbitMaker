@@ -1,11 +1,11 @@
 const Buttons =[
  {
   name:'create',
-  img:'C:\Users\vasil\Desktop\images\creat.jpg'
+  img:'images\ADD.jpg'
  },
  {
   name:'delete',
-  img:'C:\Users\vasil\Desktop\images\delete.jpg'
+  img:'images\DELETE.jpg'
  }
  
 ]
