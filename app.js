@@ -20,7 +20,7 @@ const tasks = [
 ];
 
 const ListOfTasks = document.getElementById("ListOfTasks");
-
+const ListOfCat = document.getElementById("ListOfCat");
 //gives the date
 var today = new Date();
 var date =
@@ -28,10 +28,10 @@ var date =
 document.getElementById("date").innerHTML = date;
 
 //todo add a loop to redo this when smth changed/added/deleted on page
-//counts tasks
-var cntTasks = ListOfTasks.childElementCount;
-console.log(cntTasks);
-document.getElementById("cntAll").innerHTML = cntTasks;
+//counts categories
+var cntCat = ListOfCat.childElementCount;
+console.log(cntCat);
+document.getElementById("cntAll").innerHTML = cntCat;
 
 //create a task after pressing the add button
 document.getElementById("create").addEventListener("click", function () {
