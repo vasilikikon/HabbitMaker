@@ -12,13 +12,14 @@ const buttons = [
     img: "imagesopen.png",
   },
 ];
-const categories = [
+const tasks = [
   {
-    nameCateg: "",
+    taskName: "",
+    id: 0,
   },
 ];
 
-const ListCat = document.getElementById("ListOfCategories");
+const ListOfTasks = document.getElementById("ListOfTasks");
 
 //gives the date
 var today = new Date();
@@ -26,16 +27,16 @@ var date =
   today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
 document.getElementById("date").innerHTML = date;
 
-//counts categories
-var olCNTCategories =
-  document.getElementById("ListOfCategories").childElementCount;
-console.log(olCNTCategories);
-document.getElementById("cntAll").innerHTML = olCNTCategories;
+//todo add a loop to redo this when smth changed/added/deleted on page
+//counts tasks
+var cntTasks = ListOfTasks.childElementCount;
+console.log(cntTasks);
+document.getElementById("cntAll").innerHTML = cntTasks;
 
-//create a untegroup after pressing the create button
+//create a task after pressing the add button
 document.getElementById("create").addEventListener("click", function () {
   const input = "HI";
-  if (categories.nameCateg !== input) {
+  if (categories.taskName !== input) {
     var el = document.createElement("ul");
     ListCat.appendChild(el);
   }
