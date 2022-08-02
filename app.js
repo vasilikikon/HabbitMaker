@@ -12,35 +12,59 @@ const buttons = [
     img: "imagesopen.png",
   },
 ];
-const tasks = [
+let tasks = [
   {
     taskName: "",
     id: 0,
   },
 ];
 
-const ListOfTasks = document.getElementById("ListOfTasks");
-const ListOfCat = document.getElementById("ListOfCat");
+let categories = [
+  {
+    nameCat: "Categorie one",
+    num: "0",
+  },
+];
+
+const tasksId = document.getElementById("ListOfTasks");
+const catId = document.getElementById("ListOfCat");
+const btnAdd = document.getElementById("add");
+
+//todo add a loop to redo this when smth changed/added/deleted on page
+//counts categories
+var cntCat = catId.childElementCount;
+console.log(cntCat);
+document.getElementById("cntAll").innerHTML = cntCat;
+
+var idCat = 0;
+function createId() {
+  catId.childNodes.id = idCat;
+  idCat++;
+}
+createId();
+
+console.log();
+//save all the categorie in a list
+for (let i = 0; i <= cntCat; i++) {
+  categories.nameCat[i] = "1";
+  //document.getElementById("ListOfCat").firstElementChild;
+}
+console.log(categories);
+
 //gives the date
 var today = new Date();
 var date =
   today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
 document.getElementById("date").innerHTML = date;
 
-//todo add a loop to redo this when smth changed/added/deleted on page
-//counts categories
-var cntCat = ListOfCat.childElementCount;
-console.log(cntCat);
-document.getElementById("cntAll").innerHTML = cntCat;
-
 //create a task after pressing the add button
-document.getElementById("create").addEventListener("click", function () {
+btnAdd.onclick = () => {
   const input = "HI";
   if (categories.taskName !== input) {
     var el = document.createElement("ul");
-    ListCat.appendChild(el);
+    catId.appendChild(el);
   }
-});
+};
 
 //interaction with open button todo
 document.getElementById("open").addEventListener("click", function () {
