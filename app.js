@@ -36,20 +36,48 @@ var cntCat = catId.childElementCount;
 console.log(cntCat);
 document.getElementById("cntAll").innerHTML = cntCat;
 
-var idCat = 0;
-function createId() {
-  catId.childNodes.id = idCat;
-  idCat++;
+//setting id for the tasks
+var idCat = -1;
+function createIdLiTask() {
+  return idCat++;
 }
-createId();
+var idOpen = -1;
+function createIdOpen() {
+  return idOpen++;
+}
 
-console.log();
+//if you press the ADD button
+if(){
+// Create LiTasElement
+const el = document.createElement("li");
+// Create the openButton for the element and the img for it
+const openBu = document.createElement("button");
+const openBuImg = document.createElement("img");
+//  Set ID attribute on element and the button
+el.setAttribute("id", createIdLiTask());
+openBu.setAttribute("id", createIdOpen());
+openBu.setAttribute("type", "button");
+openBuImg.setAttribute("src", "images/open.png");
+openBuImg.setAttribute("alt", "open up");
+
+// Add text content to element
+el.textContent = "";
+// Or set the innerHTML of the element
+// el.innerHTML = `<span>Hello world</span>`;
+
+//  add element to DOM
+/*const box = document.getElementById("box");
+box.appendChild(el);
+*/
+}
+
 //save all the categorie in a list
-for (let i = 0; i <= cntCat; i++) {
+/*for (let i = 0; i <= cntCat; i++) {
   categories.nameCat[i] = "1";
   //document.getElementById("ListOfCat").firstElementChild;
 }
 console.log(categories);
+*/
 
 //gives the date
 var today = new Date();
@@ -57,16 +85,8 @@ var date =
   today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
 document.getElementById("date").innerHTML = date;
 
-//create a task after pressing the add button
-btnAdd.onclick = () => {
-  const input = "HI";
-  if (categories.taskName !== input) {
-    var el = document.createElement("ul");
-    catId.appendChild(el);
-  }
-};
-
 //interaction with open button todo
-document.getElementById("open").addEventListener("click", function () {
+/*document.getElementById("open").addEventListener("click", function () {
   console.log("the open is clicked");
 });
+*/
