@@ -30,24 +30,34 @@ const tasksId = document.getElementById("ListOfTasks");
 const catId = document.getElementById("ListOfCat");
 const btnAdd = document.getElementById("add");
 
+//gives the date
+function getDate() {
+  var today = new Date();
+  var date =
+    today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+  document.getElementById("date").textContent = date;
+}
+getDate();
+
 //todo add a loop to redo this when smth changed/added/deleted on page
 //counts categories
 var cntCat = catId.childElementCount;
 console.log(cntCat);
 document.getElementById("cntAll").innerHTML = cntCat;
 
-//setting id for the tasks
+//id for the tasks
 var idCat = -1;
 function createIdLiTask() {
   return idCat++;
 }
+//id for openButtons
 var idOpen = -1;
 function createIdOpen() {
   return idOpen++;
 }
 
 //if you press the ADD button
-if(){
+//if(){
 // Create LiTasElement
 const el = document.createElement("li");
 // Create the openButton for the element and the img for it
@@ -69,7 +79,6 @@ el.textContent = "";
 /*const box = document.getElementById("box");
 box.appendChild(el);
 */
-}
 
 //save all the categorie in a list
 /*for (let i = 0; i <= cntCat; i++) {
@@ -78,12 +87,6 @@ box.appendChild(el);
 }
 console.log(categories);
 */
-
-//gives the date
-var today = new Date();
-var date =
-  today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
-document.getElementById("date").innerHTML = date;
 
 //interaction with open button todo
 /*document.getElementById("open").addEventListener("click", function () {
