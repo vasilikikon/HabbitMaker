@@ -57,28 +57,27 @@ function createIdOpen() {
 }
 
 //if you press the ADD button
-//if(){
-// Create LiTasElement
-const el = document.createElement("li");
-// Create the openButton for the element and the img for it
-const openBu = document.createElement("button");
-const openBuImg = document.createElement("img");
-//  Set ID attribute on element and the button
-el.setAttribute("id", createIdLiTask());
-openBu.setAttribute("id", createIdOpen());
-openBu.setAttribute("type", "button");
-openBuImg.setAttribute("src", "images/open.png");
-openBuImg.setAttribute("alt", "open up");
-
-// Add text content to element
-el.textContent = "";
-// Or set the innerHTML of the element
-// el.innerHTML = `<span>Hello world</span>`;
-
-//  add element to DOM
-/*const box = document.getElementById("box");
-box.appendChild(el);
-*/
+btnAdd.addEventListener("click", function () {
+  // Create LiCatElement
+  const newCat = document.createElement("li");
+  // Create the openButton for the element and the img for it
+  const openBu = document.createElement("button");
+  const openBuImg = document.createElement("img");
+  //  Set ID attribute on element and the button
+  newCat.setAttribute("id", createIdLiTask());
+  openBu.setAttribute("id", createIdOpen());
+  openBu.setAttribute("type", "button");
+  openBuImg.setAttribute("src", "images/open.png");
+  openBuImg.setAttribute("alt", "open up");
+  // Add text content to element
+  var newCatName = window.prompt("Name the Task Category");
+  newCat.innerHTML = newCatName;
+  // Or newCat.innerHTML = `<span>Hello world</span>`;
+  //  add element to DOM
+  catId.appendChild(newCat);
+  newCat.appendChild(openBu);
+  newCat.appendChild(openBuImg);
+});
 
 //save all the categorie in a list
 /*for (let i = 0; i <= cntCat; i++) {
