@@ -10,6 +10,9 @@ const buttons = [
   {
     name: "open",
     img: "imagesopen.png",
+
+    name: "submit",
+    img: "imagessubmit.png",
   },
 ];
 let tasks = [
@@ -18,7 +21,6 @@ let tasks = [
     id: 0,
   },
 ];
-
 var categories = [
   {
     newCatName: "Health",
