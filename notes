@@ -1,0 +1,7 @@
+//id for openButtons
+need to check if the ID is already existend
+
+//id for the Categories
+need to check if the ID is already existend
+
+// Or newCat.innerHTML = `<span>Hello world</span>`;
