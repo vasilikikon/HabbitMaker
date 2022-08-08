@@ -74,8 +74,10 @@ btnAdd.addEventListener("click", function () {
   openBuImg.setAttribute("src", "images/open.png");
   openBuImg.setAttribute("alt", "open up");
   // Add text content to element
-  var newCatName = window.prompt("Name the category for new task:");
+  window.location.href = "newCategoryForm.html";
+  /*var newCatName = window.prompt("Name the category for new task:");
   newCat.innerHTML = newCatName;
+  */
   //  add element to DOM
   catId.appendChild(newCat);
   newCat.appendChild(openBu);
